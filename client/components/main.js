@@ -26,6 +26,7 @@ const Main = (props) => {
             </div>
             : <div>
               {/* The navbar will show these links before you log in */}
+              <Link to="/d3trial">d3Trial</Link>
               <Link to="/login">Login</Link>
               <Link to="/signup">Sign Up</Link>
             </div>

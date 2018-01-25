@@ -29,7 +29,7 @@ export default class D3Trial extends Component {
 		const lines = ["1", "2", "3", "4", "5", "6", "7", "A", "C", "E", "B", "D", "F", "M", "J", "Z", "N", "Q", "R", "W", "G", "L", "S"]
 		const singleRoute = allRoutes.features.filter(route => route.properties.route_id === this.state.targetLine)
 		const singleTrainStops = allStops.features.filter(stop => {
-			let stopSet = new Set(stop.properties.Routes_ALL.split(' '))
+			let stopSet = new Set(stop.properties.Routes_ALL.split(', '))
 			return stopSet.has(this.state.targetLine)
 		})
 		return (
@@ -43,8 +43,8 @@ export default class D3Trial extends Component {
 	     			</select>
 	     			<button type="submit" value="Submit">Submit</button>
 	     		</form>
-	            <svg width="1280" height="960">
-	                <CongressionalDistricts width={1280} height={960} singleRoute={singleRoute} singleTrainStops={singleTrainStops}/>
+	            <svg width="800" height="800">
+	                <CongressionalDistricts width={800} height={800} singleRoute={singleRoute} singleTrainStops={singleTrainStops}/>
 	            </svg>
 	      	</div>
 		)

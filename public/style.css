@@ -22,7 +22,7 @@ form div {
 
 #routes{
 	stroke: green;
-	stroke-width:2;
+	stroke-width:5;
 	fill:none;
 	position:absolute;
 	top:0;
@@ -30,10 +30,10 @@ form div {
 	z-index:100;
 }
 
-#boroughs {
+#nycBoroughs {
   stroke: none;
 	stroke-width: 0px;
-	fill: #ffffff;
+	fill: #ddd;
 	opacity:.9;
 	position:absolute;
 	top:0;
@@ -46,4 +46,5 @@ form div {
 	left:0;
 	z-index:150;
 	fill: white;
+	stroke: black;
 }

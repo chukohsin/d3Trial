@@ -30,7 +30,7 @@ export default class CongressionalDistricts extends Component {
 
         const projection = d3.geoMercator()
           .center([-73.94, 40.70])
-          .scale(100000)
+          .scale(150000)
           .translate([width / 2, height / 2])
 
         const path = d3.geoPath(projection);
@@ -43,6 +43,7 @@ export default class CongressionalDistricts extends Component {
            .data(topojson.feature(nycBoroughs, nycBoroughs.objects["nyc-borough-boundaries-polygon"]).features)
            .enter().append("path")
            .attr("d", path)
+           .style('fill', "white")
 
         svg.append("g")
            .attr("id", "routes")
@@ -50,6 +51,7 @@ export default class CongressionalDistricts extends Component {
            .data(this.props.singleRoute)
            .enter().append("path")
            .attr("d", path)
+           .style('stroke', '#FF6319')
 
         svg.append("g")
           .attr("id", "stops")

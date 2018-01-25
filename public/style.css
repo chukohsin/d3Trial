@@ -19,3 +19,31 @@ form div {
   margin: 1em;
   display: inline-block;
 }
+
+#routes{
+	stroke: green;
+	stroke-width:2;
+	fill:none;
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:100;
+}
+
+#boroughs {
+  stroke: none;
+	stroke-width: 0px;
+	fill: #ffffff;
+	opacity:.9;
+	position:absolute;
+	top:0;
+	left:0;
+}
+
+#stops{
+	position:absolute;
+	top:0;
+	left:0;
+	z-index:150;
+	fill: white;
+}
